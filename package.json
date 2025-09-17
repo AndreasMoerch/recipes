@@ -17,6 +17,9 @@
       "react-app"
     ]
   },
+  "devDependencies": {
+    "typescript": "5.9.2"
+  },
   "browserslist": {
     "production": [
       "defaults"
