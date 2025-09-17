@@ -1,5 +1,4 @@
 import React from 'react';
-import { Recipe } from '../../types/Recipe';
 import { allRecipes } from '../../data/allRecipes';
 
 /**
