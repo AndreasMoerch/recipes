@@ -30,3 +30,7 @@
   font-size: 1.2rem;
   color: #666;
 }
+
+.App-header div {
+  text-align: left;
+}
