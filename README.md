@@ -1,6 +1,6 @@
 # Recipe - A React App for GitHub Pages
 
-Simple React Hello World app deployed to GitHub Pages.
+A list of recipies we use ourselves. A simple react app deployed to GitHub pages - can be found live at: [https://andreasmoerch.github.io/recipes/](https://andreasmoerch.github.io/recipes/). 
 
 *A small app created for learning, chatting with GitHub Copilot, and creating something useful.*
 
