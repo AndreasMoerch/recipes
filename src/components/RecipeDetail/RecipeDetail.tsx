@@ -7,8 +7,10 @@ import { allRecipes } from '../../data/allRecipes';
  * Uses URL parameter to find and display the specific recipe
  */
 const RecipeDetail: React.FC = () => {
+  // Fetch id from uri query params.
   const { id } = useParams<{ id: string }>();
-  const recipe = allRecipes.find(r => r.id === Number(id));
+
+  const recipe = allRecipes.find(recipe => recipe.id === id);
 
   if (!recipe) {
     return (

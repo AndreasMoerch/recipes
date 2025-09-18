@@ -1,5 +1,6 @@
-import { BaseRecipe } from '../../types/Recipe';
+import { Recipe } from '../../types/Recipe';
 
-export const spaghettiCarbonara: BaseRecipe = {
+export const spaghettiCarbonara: Recipe = {
+  id: "spaghetti-carbonara",
   name: "Spaghetti Carbonara"
 };

@@ -3,11 +3,11 @@ import { spaghettiCarbonara } from './recipes/spaghettiCarbonara';
 import { chickenTikkaMasala } from './recipes/chickenTikkaMasala';
 
 /**
- * Complete list of recipes.
+ * Complete list of all recipes.
  *
  * When adding a new recipe, remember to add it here!
  */
 export const allRecipes: Recipe[] = [
-  { id: 1, ...spaghettiCarbonara },
-  { id: 2, ...chickenTikkaMasala }
+  spaghettiCarbonara,
+  chickenTikkaMasala
 ];
