@@ -1,0 +1,28 @@
+.recipe-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.recipe-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.recipe-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-item a {
+  text-decoration: none;
+  color: #2c2c2c;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.recipe-item a:hover {
+  color: #d2691e;
+}
