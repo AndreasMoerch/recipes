@@ -25,3 +25,52 @@
   margin: 1rem 0;
 }
 
+/* Ingredients section */
+.ingredients-section {
+  margin-top: 2rem;
+}
+
+.ingredients-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e8e8e8;
+  padding-bottom: 0.5rem;
+}
+
+.ingredients-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ingredient-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ingredient-item:last-child {
+  border-bottom: none;
+}
+
+.ingredient-amount {
+  font-weight: 600;
+  color: #d2691e;
+  min-width: 3rem;
+  text-align: right;
+}
+
+.ingredient-unit {
+  color: #666;
+  font-size: 0.9rem;
+  min-width: 4rem;
+}
+
+.ingredient-name {
+  color: #2c2c2c;
+  flex: 1;
+}
