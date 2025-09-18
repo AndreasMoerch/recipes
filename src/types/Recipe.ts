@@ -20,4 +20,6 @@ export interface Recipe {
   name: string;
   /** List of ingredients needed for the recipe */
   ingredients: Ingredient[];
+  /** Step-by-step cooking instructions */
+  steps: string[];
 }

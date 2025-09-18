@@ -34,11 +34,22 @@ const RecipeDetail: React.FC = () => {
           {recipe.ingredients.map((ingredient) => (
             <li key={ingredient.name} className="ingredient-item">
               <span className="ingredient-amount">{ingredient.amount}</span>
-              {ingredient.unit && <span className="ingredient-unit">{ingredient.unit}</span>}
+              <span className="ingredient-unit">{ingredient.unit}</span>
               <span className="ingredient-name">{ingredient.name}</span>
             </li>
           ))}
         </ul>
+      </section>
+
+      <section className="steps-section">
+        <h2>Instructions</h2>
+        <ol className="steps-list">
+          {recipe.steps.map((step, index) => (
+            <li key={index} className="step-item">
+              {step}
+            </li>
+          ))}
+        </ol>
       </section>
     </div>
   );
