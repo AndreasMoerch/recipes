@@ -9,8 +9,8 @@ import './RecipeDetail.css';
  * Uses URL parameter to find and display the specific recipe
  */
 const RecipeDetail: React.FC = () => {
-  // Fetch id and category from uri query params.
-  const { id, category } = useParams<{ id: string; category?: string }>();
+  // Fetch id from uri query params.
+  const { id } = useParams<{ id: string }>();
 
   const recipe = allRecipes.find(recipe => recipe.id === id);
 

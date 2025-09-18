@@ -49,7 +49,7 @@ const RecipeList: React.FC = () => {
               className={`category-filter ${selectedCategory === category ? 'active' : ''}`}
               onClick={() => toggleCategory(category)}
             >
-              <Category category={category} />
+              <Category name={category} />
             </button>
           ))}
         </div>
@@ -61,7 +61,7 @@ const RecipeList: React.FC = () => {
             <Link to={`/category/${recipe.category}/recipe/${recipe.id}`} className="recipe-link">
               {recipe.name}
             </Link>
-            <Category category={recipe.category} />
+            <Category name={recipe.category} />
           </div>
         ))}
       </div>

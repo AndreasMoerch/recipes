@@ -3,16 +3,16 @@ import './Category.css';
 
 interface CategoryProps {
   /** The category name to display */
-  category: string;
+  name: string;
 }
 
 /**
  * Component for displaying recipe category with consistent styling
  */
-const Category: React.FC<CategoryProps> = ({ category }) => {
+const Category: React.FC<CategoryProps> = ({ name }) => {
   return (
     <span className="category">
-      {category}
+      {name}
     </span>
   );
 };
