@@ -27,7 +27,19 @@ const RecipeDetail: React.FC = () => {
     <div className="recipe-detail">
       <Breadcrumb currentPageLabel={recipe.name} />
       <h1 className="recipe-title">{recipe.name}</h1>
-      <p>Recipe details coming soon...</p>
+      
+      <section className="ingredients-section">
+        <h2>Ingredients</h2>
+        <ul className="ingredients-list">
+          {recipe.ingredients.map((ingredient) => (
+            <li key={ingredient.name} className="ingredient-item">
+              <span className="ingredient-amount">{ingredient.amount}</span>
+              {ingredient.unit && <span className="ingredient-unit">{ingredient.unit}</span>}
+              <span className="ingredient-name">{ingredient.name}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
     </div>
   );
 };
