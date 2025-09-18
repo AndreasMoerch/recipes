@@ -1,36 +1,25 @@
+/* Global application styles */
 .App {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.App-header {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 3rem 4rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
-}
-
-.App-header h1 {
-  margin: 0 0 1rem 0;
-  font-size: 3rem;
-  font-weight: 700;
+  background: #fafafa;
   color: #333;
 }
 
-.App-header p {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #666;
+.App-header {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-.App-header div {
-  text-align: left;
+.App-header h1 {
+  margin: 0 0 2rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c2c2c;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e8e8e8;
 }
