@@ -1,23 +1,70 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { Recipe } from '../../types/Recipe';
 import { allRecipes } from '../../data/allRecipes';
+import Category from '../Category';
 import './RecipeList.css';
 
 /**
  * Component that displays a list of all available recipes
- * Each recipe name is a clickable link to the recipe detail page
  */
 const RecipeList: React.FC = () => {
   const recipes: Recipe[] = allRecipes;
+  const { category: urlCategory } = useParams<{ category: string }>();
+  const navigate = useNavigate();
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  // Get unique categories from all recipes
+  const categories = Array.from(new Set(recipes.map(recipe => recipe.category)));
+
+  // Sync URL category with state
+  useEffect(() => {
+    setSelectedCategory(urlCategory || null);
+  }, [urlCategory]);
+
+  // Toggle category selection and update URL
+  const toggleCategory = (category: string) => {
+    if (selectedCategory === category) {
+      // Deselect - go back to home
+      navigate('/');
+    } else {
+      // Select - navigate to category URL
+      navigate(`/category/${category}`);
+    }
+  };
+
+  // Filter recipes based on selected category
+  const filteredRecipes = selectedCategory 
+    ? recipes.filter(recipe => recipe.category === selectedCategory)
+    : recipes;
 
   return (
-    <div className="recipe-list">
-      {recipes.map((recipe) => (
-        <div key={recipe.id} className="recipe-item">
-          <Link to={`/recipe/${recipe.id}`}>{recipe.name}</Link>
+    <div className="recipe-list-container">
+      <div className="categories-section">
+        <h2>Categories</h2>
+        <div className="categories-list">
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={`category-filter ${selectedCategory === category ? 'active' : ''}`}
+              onClick={() => toggleCategory(category)}
+            >
+              <Category category={category} />
+            </button>
+          ))}
         </div>
-      ))}
+      </div>
+
+      <div className="recipe-list">
+        {filteredRecipes.map((recipe) => (
+          <div key={recipe.id} className="recipe-item">
+            <Link to={`/category/${recipe.category}/recipe/${recipe.id}`} className="recipe-link">
+              {recipe.name}
+            </Link>
+            <Category category={recipe.category} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

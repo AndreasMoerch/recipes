@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const chickenTikkaMasala: Recipe = {
   id: "chicken-tikka-masala",
   name: "Chicken Tikka Masala",
+  category: "dinner",
   ingredients: [
     { name: "chicken breast", amount: "1", unit: "lb" },
     { name: "plain yogurt", amount: "1/2", unit: "cup" },

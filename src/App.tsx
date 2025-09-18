@@ -12,7 +12,8 @@ const App: React.FC = () => {
           <h1>Recipes</h1>
           <Routes>
             <Route path="/" element={<RecipeList />} />
-            <Route path="/recipe/:id" element={<RecipeDetail />} />
+            <Route path="/category/:category" element={<RecipeList />} />
+            <Route path="/category/:category/recipe/:id" element={<RecipeDetail />} />
           </Routes>
         </header>
       </div>

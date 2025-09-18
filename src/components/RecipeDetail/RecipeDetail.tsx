@@ -9,8 +9,8 @@ import './RecipeDetail.css';
  * Uses URL parameter to find and display the specific recipe
  */
 const RecipeDetail: React.FC = () => {
-  // Fetch id from uri query params.
-  const { id } = useParams<{ id: string }>();
+  // Fetch id and category from uri query params.
+  const { id, category } = useParams<{ id: string; category?: string }>();
 
   const recipe = allRecipes.find(recipe => recipe.id === id);
 
@@ -25,7 +25,10 @@ const RecipeDetail: React.FC = () => {
 
   return (
     <div className="recipe-detail">
-      <Breadcrumb currentPageLabel={recipe.name} />
+      <Breadcrumb 
+        currentPageLabel={recipe.name} 
+        additionalBreadcrumbItems={[{ label: recipe.category, path: `/category/${recipe.category}` }]}
+      />
       <h1 className="recipe-title">{recipe.name}</h1>
       
       <section className="ingredients-section">
