@@ -1,7 +1,7 @@
 {
   "name": "recipes",
   "version": "0.1.0",
-  "homepage": "https://AndreasMoerch.github.io/recipes",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "react": "^19.1.1",
