@@ -1,0 +1,17 @@
+Do not go to crazy on the files changed. Prefer generally smaller increments
+over large changes. Do it in smaller steps.
+
+Add documentation (on functions, etc.), but do not be verbose. Be short, and
+concise.
+
+Do not add fluff stuff.
+
+Regarding code style:
+- Do not use abbreviations.
+- Always remove trailing spaces.
+
+
+Always ensure that the project can be built when you are done.
+
+Generally ignore the TODO.txt file. The only time you can alter it is to remove a TODO that
+has been done. Never implement anything from without explicit instructions.
