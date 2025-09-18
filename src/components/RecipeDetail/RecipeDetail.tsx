@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { allRecipes } from '../../data/allRecipes';
+import Breadcrumb from '../Breadcrumb';
 import './RecipeDetail.css';
 
 /**
@@ -24,12 +25,7 @@ const RecipeDetail: React.FC = () => {
 
   return (
     <div className="recipe-detail">
-      <nav className="breadcrumb">
-        <Link to="/">RECIPES</Link>
-        <span className="breadcrumb-separator">›</span>
-        <span>{recipe.name.toUpperCase()}</span>
-      </nav>
-      <Link to="/" className="back-link">← Back to recipes</Link>
+      <Breadcrumb currentPageLabel={recipe.name} />
       <h1 className="recipe-title">{recipe.name}</h1>
       <p>Recipe details coming soon...</p>
     </div>
