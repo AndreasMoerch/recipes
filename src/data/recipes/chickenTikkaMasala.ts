@@ -16,5 +16,14 @@ export const chickenTikkaMasala: Recipe = {
     { name: "cumin", amount: "1", unit: "tsp" },
     { name: "salt", amount: "1", unit: "tsp" },
     { name: "vegetable oil", amount: "2", unit: "tbsp" }
+  ],
+  steps: [
+    "Cut chicken breast into bite-sized pieces and marinate in yogurt, minced garlic, ginger, and half the spices for at least 30 minutes.",
+    "Heat 1 tbsp oil in a large skillet over medium-high heat and cook marinated chicken until browned and cooked through. Remove and set aside.",
+    "In the same skillet, add remaining oil and sauté diced onion until softened and golden, about 5 minutes.",
+    "Add remaining garlic, ginger, garam masala, paprika, and cumin. Cook for 1 minute until fragrant.",
+    "Pour in crushed tomatoes and simmer for 10 minutes, stirring occasionally.",
+    "Stir in heavy cream and return chicken to the skillet. Simmer for 5 more minutes.",
+    "Season with salt to taste and serve hot with rice or naan bread."
   ]
 };
