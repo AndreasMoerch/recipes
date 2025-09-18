@@ -60,9 +60,17 @@ const RecipeList: React.FC = () => {
       <div className="recipe-list">
         {filteredRecipes.map((recipe) => (
           <div key={recipe.id} className="recipe-item">
-            <Link to={`/category/${recipe.category}/recipe/${recipe.id}`} className="recipe-link">
-              {recipe.name}
-            </Link>
+            <div className="recipe-main-info">
+              <Link to={`/category/${recipe.category}/recipe/${recipe.id}`} className="recipe-link">
+                {recipe.name}
+              </Link>
+              {recipe.prepTime && (
+                <div className="recipe-prep-time">
+                  <span className="prep-time-icon">⏱️</span>
+                  <span className="prep-time-text">{recipe.prepTime.amount} {recipe.prepTime.unit}</span>
+                </div>
+              )}
+            </div>
             <Category name={recipe.category} />
           </div>
         ))}

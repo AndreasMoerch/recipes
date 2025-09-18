@@ -31,6 +31,13 @@ const RecipeDetail: React.FC = () => {
       />
       <h1 className="recipe-title">{recipe.name}</h1>
       
+      {recipe.prepTime && (
+        <div className="prep-time">
+          <span className="prep-time-icon">⏱️</span>
+          <span className="prep-time-text">Prep time: {recipe.prepTime.amount} {recipe.prepTime.unit}</span>
+        </div>
+      )}
+      
       <section className="ingredients-section">
         <h2>Ingredients</h2>
         <ul className="ingredients-list">
