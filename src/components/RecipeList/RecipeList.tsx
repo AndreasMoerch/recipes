@@ -6,7 +6,9 @@ import Category from '../Category';
 import './RecipeList.css';
 
 /**
- * Component that displays a list of all available recipes
+ * Displays a list of all available recipes with category filtering capabilities.
+ * Allows users to filter recipes by category, updates the URL to reflect the selected category,
+ * and synchronizes the selected category with the URL for direct navigation and bookmarking.
  */
 const RecipeList: React.FC = () => {
   const recipes: Recipe[] = allRecipes;
