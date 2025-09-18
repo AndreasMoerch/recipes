@@ -18,6 +18,8 @@ export interface Recipe {
   id: string;
   /** Display name of the recipe */
   name: string;
+  /** Recipe category (e.g., "dinner", "dessert", "breakfast") */
+  category: string;
   /** List of ingredients needed for the recipe */
   ingredients: Ingredient[];
   /** Step-by-step cooking instructions */

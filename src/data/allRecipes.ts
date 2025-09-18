@@ -1,6 +1,7 @@
 import { Recipe } from '../types/Recipe';
 import { spaghettiCarbonara } from './recipes/spaghettiCarbonara';
 import { chickenTikkaMasala } from './recipes/chickenTikkaMasala';
+import { liquoriceCheesecake } from './recipes/liquoriceCheesecake';
 
 /**
  * Complete list of all recipes.
@@ -9,5 +10,6 @@ import { chickenTikkaMasala } from './recipes/chickenTikkaMasala';
  */
 export const allRecipes: Recipe[] = [
   spaghettiCarbonara,
-  chickenTikkaMasala
+  chickenTikkaMasala,
+  liquoriceCheesecake
 ];

@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const spaghettiCarbonara: Recipe = {
   id: "spaghetti-carbonara",
   name: "Spaghetti Carbonara",
+  category: "dinner",
   ingredients: [
     { name: "spaghetti", amount: "400", unit: "g" },
     { name: "pancetta", amount: "150", unit: "g" },

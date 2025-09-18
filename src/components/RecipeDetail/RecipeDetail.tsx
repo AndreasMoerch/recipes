@@ -25,7 +25,10 @@ const RecipeDetail: React.FC = () => {
 
   return (
     <div className="recipe-detail">
-      <Breadcrumb currentPageLabel={recipe.name} />
+      <Breadcrumb 
+        currentPageLabel={recipe.name} 
+        additionalBreadcrumbItems={[{ label: recipe.category, path: `/category/${recipe.category}` }]}
+      />
       <h1 className="recipe-title">{recipe.name}</h1>
       
       <section className="ingredients-section">
