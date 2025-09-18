@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { Recipe } from '../../types/Recipe';
 import { allRecipes } from '../../data/allRecipes';
-import Category from '../Category';
+import Category from '../Category/Category';
 import './RecipeList.css';
 
 /**
