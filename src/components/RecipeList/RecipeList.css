@@ -63,6 +63,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+.recipe-main-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .recipe-item a {
   text-decoration: none;
   color: #2c2c2c;
@@ -72,4 +78,20 @@
 
 .recipe-item a:hover {
   color: #d2691e;
+}
+
+.recipe-prep-time {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.recipe-prep-time .prep-time-icon {
+  font-size: 1rem;
+}
+
+.recipe-prep-time .prep-time-text {
+  font-weight: 500;
 }

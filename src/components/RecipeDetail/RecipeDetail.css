@@ -25,6 +25,28 @@
   margin: 1rem 0;
 }
 
+/* Prep time display */
+.prep-time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0 2rem 0;
+  padding: 0.75rem 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #d2691e;
+}
+
+.prep-time-icon {
+  font-size: 1.2rem;
+}
+
+.prep-time-text {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+}
+
 /* Ingredients section */
 .ingredients-section {
   margin-top: 2rem;

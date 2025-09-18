@@ -11,6 +11,16 @@ export interface Ingredient {
 }
 
 /**
+ * Represents preparation time with flexible amount and unit
+ */
+export interface PrepTime {
+  /** The amount of time (e.g., 15, 30, 45) */
+  amount: number;
+  /** The unit of time (e.g., "minutes", "hours", "days") */
+  unit: string;
+}
+
+/**
  * A single recipe, with everything included.
  */
 export interface Recipe {
@@ -24,4 +34,6 @@ export interface Recipe {
   ingredients: Ingredient[];
   /** Step-by-step cooking instructions */
   steps: string[];
+  /** Preparation time with amount and unit (optional) */
+  prepTime?: PrepTime;
 }

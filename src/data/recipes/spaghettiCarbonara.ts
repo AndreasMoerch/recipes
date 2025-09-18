@@ -4,6 +4,7 @@ export const spaghettiCarbonara: Recipe = {
   id: "spaghetti-carbonara",
   name: "Spaghetti Carbonara",
   category: "dinner",
+  prepTime: { amount: 15, unit: "minutes" },
   ingredients: [
     { name: "spaghetti", amount: "400", unit: "g" },
     { name: "pancetta", amount: "150", unit: "g" },

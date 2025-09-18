@@ -4,6 +4,7 @@ export const liquoriceCheesecake: Recipe = {
   id: "liquorice-cheesecake",
   name: "Liquorice Cheesecake",
   category: "dessert",
+  prepTime: { amount: 30, unit: "minutes" },
   ingredients: [
     { name: "digestive biscuits", amount: "200", unit: "g" },
     { name: "unsalted butter", amount: "80", unit: "g" },
