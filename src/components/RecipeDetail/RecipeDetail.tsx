@@ -31,8 +31,8 @@ const RecipeDetail: React.FC = () => {
       <section className="ingredients-section">
         <h2>Ingredients</h2>
         <ul className="ingredients-list">
-          {recipe.ingredients.map((ingredient, index) => (
-            <li key={index} className="ingredient-item">
+          {recipe.ingredients.map((ingredient) => (
+            <li key={ingredient.name} className="ingredient-item">
               <span className="ingredient-amount">{ingredient.amount}</span>
               {ingredient.unit && <span className="ingredient-unit">{ingredient.unit}</span>}
               <span className="ingredient-name">{ingredient.name}</span>
