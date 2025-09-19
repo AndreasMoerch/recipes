@@ -1,5 +1,5 @@
 import React from 'react';
-import { useFavorites } from '../../hooks/useFavorites';
+import { useFavoritesContext } from '../../contexts/FavoritesContext';
 import { HeartIcon } from '../Icons';
 import './FavoriteButton.css';
 
@@ -10,12 +10,12 @@ interface FavoriteButtonProps {
 
 /**
  * Heart-shaped favorite button that toggles between filled and empty states
- * Manages favorites state internally using the useFavorites hook
+ * Manages favorites state internally using the favorites context
  */
 const FavoriteButton: React.FC<FavoriteButtonProps> = ({ 
   recipeId
 }) => {
-  const { toggleFavorite, isFavorite } = useFavorites();
+  const { toggleFavorite, isFavorite } = useFavoritesContext();
 
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault(); // Prevent navigation when button is inside a Link

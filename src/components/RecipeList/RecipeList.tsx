@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { allRecipes } from '../../data/allRecipes';
 import { useRecipeFiltering } from '../../hooks/useRecipeFiltering';
-import { useFavorites } from '../../hooks/useFavorites';
+import { useFavoritesContext } from '../../contexts/FavoritesContext';
 import { HeartIcon } from '../Icons';
 import Category from '../Category/Category';
 import PrepTime from '../PrepTime/PrepTime';
@@ -15,7 +15,7 @@ import './RecipeList.css';
  * and synchronizes the selected category with the URL for direct navigation and bookmarking.
  */
 const RecipeList: React.FC = () => {
-  const { favorites, favoriteCount } = useFavorites();
+  const { favorites, favoriteCount } = useFavoritesContext();
   const { 
     selectedCategory, 
     categories, 
