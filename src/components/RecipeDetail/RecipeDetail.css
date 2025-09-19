@@ -45,27 +45,9 @@
   object-fit: cover;
 }
 
-/* Prep time display */
-.prep-time {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin: 0 0 3rem 0;
-  padding: 1rem 1.5rem;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-radius: 10px;
-  border-left: 4px solid #d2691e;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.prep-time-icon {
-  font-size: 1.2rem;
-}
-
-.prep-time-text {
-  font-size: 1rem;
-  color: #555;
-  font-weight: 500;
+/* Prep time display - simple margin for detail page */
+.recipe-detail .prep-time {
+  margin: 0 0 2rem 0;
 }
 
 /* Ingredients section */

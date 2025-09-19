@@ -3,6 +3,7 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import { Recipe } from '../../types/Recipe';
 import { allRecipes } from '../../data/allRecipes';
 import Category from '../Category/Category';
+import PrepTime from '../PrepTime/PrepTime';
 import './RecipeList.css';
 
 /**
@@ -70,10 +71,7 @@ const RecipeList: React.FC = () => {
                   {recipe.name}
                 </div>
                 <div className="recipe-meta">
-                  <div className="recipe-prep-time">
-                    <span className="prep-time-icon">⏱️</span>
-                    <span className="prep-time-text">{recipe.prepTime.amount} {recipe.prepTime.unit}</span>
-                  </div>
+                  <PrepTime prepTime={recipe.prepTime} />
                   <Category name={recipe.category} />
                 </div>
               </div>

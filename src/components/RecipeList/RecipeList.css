@@ -127,20 +127,3 @@
 .recipe-item-link:hover .recipe-name {
   color: #d2691e;
 }
-
-.recipe-prep-time {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.95rem;
-  color: #6c757d;
-  font-weight: 500;
-}
-
-.recipe-prep-time .prep-time-icon {
-  font-size: 1.1rem;
-}
-
-.recipe-prep-time .prep-time-text {
-  font-weight: 500;
-}
