@@ -35,7 +35,7 @@ const RecipeList: React.FC = () => {
         {filteredRecipes.map((recipe) => (
           <Link
             key={recipe.id}
-            to={`/category/${recipe.category}/recipe/${recipe.id}`}
+            to={`/recipe/${recipe.id}`}
             className="recipe-item-link"
           >
             <div className="recipe-item">
