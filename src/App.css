@@ -4,22 +4,17 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  background: #fafafa;
+  background: #f8f9fa;
   color: #333;
+  line-height: 1.5;
 }
 
-.App-header {
-  max-width: 800px;
+.App-content {
+  transition: all 0.2s ease-in-out;
+}
+
+.App-content {
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-.App-header h1 {
-  margin: 0 0 2rem 0;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #2c2c2c;
-  text-align: center;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid #e8e8e8;
+  padding: 2rem 1.5rem;
 }
