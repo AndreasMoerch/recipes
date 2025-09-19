@@ -1,15 +1,15 @@
 import React from 'react';
 import './Category.css';
 
-interface CategoryProps {
-  /** The category name to display */
-  name: string;
-}
-
 const CATEGORY_EMOJIS: Record<string, string> = {
   dinner: '🍽️',
   dessert: '🍰',
 };
+
+interface CategoryProps {
+  /** The category name to display */
+  name: string;
+}
 
 /**
  * Component for displaying recipe category with consistent styling
