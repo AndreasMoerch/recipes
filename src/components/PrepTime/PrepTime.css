@@ -1,0 +1,15 @@
+.prep-time {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.prep-time-icon {
+  font-size: 0.875rem;
+}
+
+.prep-time-text {
+  font-size: 0.875rem;
+  color: #666;
+  font-weight: 500;
+}

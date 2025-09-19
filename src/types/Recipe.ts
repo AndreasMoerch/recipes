@@ -34,7 +34,7 @@ export interface Recipe {
   ingredients: Ingredient[];
   /** Step-by-step cooking instructions */
   steps: string[];
-  /** Preparation time with amount and unit (optional) */
+  /** Preparation time with amount and unit */
   prepTime: PrepTime;
   /** Recipe image URL (optional) */
   imageUrl?: string;

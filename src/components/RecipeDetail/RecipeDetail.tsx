@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { allRecipes } from '../../data/allRecipes';
 import Breadcrumb from '../Breadcrumb';
+import PrepTime from '../PrepTime/PrepTime';
 import './RecipeDetail.css';
 
 /**
@@ -37,12 +38,7 @@ const RecipeDetail: React.FC = () => {
         </div>
       )}
       
-      {recipe.prepTime && (
-        <div className="prep-time">
-          <span className="prep-time-icon">⏱️</span>
-          <span className="prep-time-text">Prep time: {recipe.prepTime.amount} {recipe.prepTime.unit}</span>
-        </div>
-      )}
+      <PrepTime prepTime={recipe.prepTime} />
       
       <section className="ingredients-section">
         <h2>Ingredients</h2>
