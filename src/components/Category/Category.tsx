@@ -6,13 +6,21 @@ interface CategoryProps {
   name: string;
 }
 
+const CATEGORY_EMOJIS: Record<string, string> = {
+  dinner: '🍽️',
+  dessert: '🍰',
+};
+
 /**
  * Component for displaying recipe category with consistent styling
  */
 const Category: React.FC<CategoryProps> = ({ name }) => {
+  const emoji = CATEGORY_EMOJIS[name.toLowerCase()] || '🍴';
+
   return (
     <span className="category">
-      {name}
+      <span className="category-emoji">{emoji}</span>
+      <span className="category-text">{name}</span>
     </span>
   );
 };
