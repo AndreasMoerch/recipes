@@ -31,6 +31,12 @@ const RecipeDetail: React.FC = () => {
       />
       <h1 className="recipe-title">{recipe.name}</h1>
       
+      {recipe.imageUrl && (
+        <div className="recipe-hero-image">
+          <img src={recipe.imageUrl} alt={recipe.name} />
+        </div>
+      )}
+      
       {recipe.prepTime && (
         <div className="prep-time">
           <span className="prep-time-icon">⏱️</span>

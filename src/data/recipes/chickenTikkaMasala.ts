@@ -5,6 +5,7 @@ export const chickenTikkaMasala: Recipe = {
   name: "Chicken Tikka Masala",
   category: "dinner",
   prepTime: { amount: 45, unit: "minutes" },
+  imageUrl: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&h=600&fit=crop&crop=center",
   ingredients: [
     { name: "chicken breast", amount: "1", unit: "lb" },
     { name: "plain yogurt", amount: "1/2", unit: "cup" },

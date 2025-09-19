@@ -69,13 +69,20 @@ const RecipeList: React.FC = () => {
                 <div className="recipe-name">
                   {recipe.name}
                 </div>
-                <div className="recipe-prep-time">
-                  <span className="prep-time-icon">⏱️</span>
-                  <span className="prep-time-text">{recipe.prepTime.amount} {recipe.prepTime.unit}</span>
+                <div className="recipe-meta">
+                  <div className="recipe-prep-time">
+                    <span className="prep-time-icon">⏱️</span>
+                    <span className="prep-time-text">{recipe.prepTime.amount} {recipe.prepTime.unit}</span>
+                  </div>
+                  <Category name={recipe.category} />
                 </div>
-
               </div>
-              <Category name={recipe.category} />
+              
+              {recipe.imageUrl && (
+                <div className="recipe-image">
+                  <img src={recipe.imageUrl} alt={recipe.name} />
+                </div>
+              )}
             </div>
           </Link>
         ))}
