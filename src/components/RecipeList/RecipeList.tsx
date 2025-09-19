@@ -2,11 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { allRecipes } from '../../data/allRecipes';
 import { useRecipeFiltering } from '../../hooks/useRecipeFiltering';
-import { useFavoritesContext } from '../../contexts/FavoritesContext';
-import { HeartIcon } from '../Icons';
 import Category from '../Category/Category';
 import PrepTime from '../PrepTime/PrepTime';
-import FavoriteButton from '../FavoriteButton';
 import './RecipeList.css';
 
 /**
@@ -15,48 +12,23 @@ import './RecipeList.css';
  * and synchronizes the selected category with the URL for direct navigation and bookmarking.
  */
 const RecipeList: React.FC = () => {
-  const { favorites, favoriteCount } = useFavoritesContext();
-  const { 
-    selectedCategory, 
-    categories, 
-    filteredRecipes, 
-    toggleCategory,
-    showFavoritesOnly,
-    toggleFavoritesFilter
-  } = useRecipeFiltering(allRecipes, favorites);
+  const { selectedCategory, categories, filteredRecipes, toggleCategory } = useRecipeFiltering(allRecipes);
 
   return (
     <div className="recipe-list-container">
-      <div className="filters-section">
-        <div className="categories-section">
-          <h2>Categories</h2>
-          <div className="categories-list">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className={`category-filter ${selectedCategory === category ? 'active' : ''}`}
-                onClick={() => toggleCategory(category)}
-              >
-                <Category name={category} />
-              </button>
-            ))}
-          </div>
+      <div className="categories-section">
+        <h2>Categories</h2>
+        <div className="categories-list">
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={`category-filter ${selectedCategory === category ? 'active' : ''}`}
+              onClick={() => toggleCategory(category)}
+            >
+              <Category name={category} />
+            </button>
+          ))}
         </div>
-
-        {favoriteCount > 0 && (
-          <div className="favorites-section">
-            <h2>Favorites</h2>
-            <div className="favorites-controls">
-              <button
-                className={`favorites-filter ${showFavoritesOnly ? 'active' : ''}`}
-                onClick={toggleFavoritesFilter}
-              >
-                <HeartIcon filled={true} size={16} />
-                Show Favorites Only ({favoriteCount})
-              </button>
-            </div>
-          </div>
-        )}
       </div>
 
       <div className="recipe-list">
@@ -77,16 +49,11 @@ const RecipeList: React.FC = () => {
                 </div>
               </div>
               
-              <div className="recipe-actions">
-                <FavoriteButton
-                  recipeId={recipe.id}
-                />
-                {recipe.imageUrl && (
-                  <div className="recipe-image">
-                    <img src={recipe.imageUrl} alt={recipe.name} />
-                  </div>
-                )}
-              </div>
+              {recipe.imageUrl && (
+                <div className="recipe-image">
+                  <img src={recipe.imageUrl} alt={recipe.name} />
+                </div>
+              )}
             </div>
           </Link>
         ))}
