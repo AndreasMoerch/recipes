@@ -11,7 +11,6 @@ interface PrepTimeProps {
 
 /**
  * Reusable component for displaying recipe preparation time
- * Used in both RecipeList and RecipeDetail components
  */
 const PrepTime: React.FC<PrepTimeProps> = ({ prepTime, className = '' }) => {
   return (
