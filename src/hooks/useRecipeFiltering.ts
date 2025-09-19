@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Recipe } from '../types/Recipe';
 
@@ -12,10 +12,7 @@ export const useRecipeFiltering = (recipes: Recipe[]) => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   // Get unique categories from all recipes
-  const categories = useMemo(() => 
-    Array.from(new Set(recipes.map(recipe => recipe.category))),
-    [recipes]
-  );
+  const categories = Array.from(new Set(recipes.map(recipe => recipe.category)));
 
   // Sync URL category with state
   useEffect(() => {
@@ -34,12 +31,9 @@ export const useRecipeFiltering = (recipes: Recipe[]) => {
   };
 
   // Filter recipes based on selected category
-  const filteredRecipes = useMemo(() =>
-    selectedCategory
+  const filteredRecipes = selectedCategory
       ? recipes.filter(recipe => recipe.category === selectedCategory)
-      : recipes,
-    [recipes, selectedCategory]
-  );
+      : recipes;
 
   return {
     selectedCategory,
