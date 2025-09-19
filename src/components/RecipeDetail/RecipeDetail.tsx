@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import { useRecipeData } from '../../hooks/useRecipeData';
 import Breadcrumb from '../Breadcrumb';
 import PrepTime from '../PrepTime/PrepTime';
-import FavoriteButton from '../FavoriteButton';
 import './RecipeDetail.css';
 
 /**
@@ -21,12 +20,7 @@ const RecipeDetail: React.FC = () => {
       <Breadcrumb 
         currentPageLabel={recipe.name} 
       />
-      <div className="recipe-header">
-        <h1 className="recipe-title">{recipe.name}</h1>
-        <FavoriteButton
-          recipeId={recipe.id}
-        />
-      </div>
+      <h1 className="recipe-title">{recipe.name}</h1>
       
       {recipe.imageUrl && (
         <div className="recipe-hero-image">
