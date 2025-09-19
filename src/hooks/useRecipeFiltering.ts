@@ -1,32 +1,24 @@
-import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import { Recipe } from '../types/Recipe';
 
 /**
  * Custom hook for recipe filtering and category management
- * Handles URL synchronization, category selection, and recipe filtering
+ * Handles category selection and recipe filtering (no URL routing)
  */
 export const useRecipeFiltering = (recipes: Recipe[]) => {
-  const { category: urlCategory } = useParams<{ category: string }>();
-  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   // Get unique categories from all recipes
   const categories = Array.from(new Set(recipes.map(recipe => recipe.category)));
 
-  // Sync URL category with state
-  useEffect(() => {
-    setSelectedCategory(urlCategory || null);
-  }, [urlCategory]);
-
-  // Toggle category selection and update URL
+  // Toggle category selection
   const toggleCategory = (category: string) => {
     if (selectedCategory === category) {
-      // Deselect - go back to home
-      navigate('/');
+      // Deselect category
+      setSelectedCategory(null);
     } else {
-      // Select - navigate to category URL
-      navigate(`/category/${category}`);
+      // Select category
+      setSelectedCategory(category);
     }
   };
 
