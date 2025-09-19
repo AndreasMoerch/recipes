@@ -48,19 +48,27 @@
   gap: 1rem;
 }
 
+.recipe-item-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .recipe-item {
   background: white;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
-.recipe-item:hover {
+.recipe-item-link:hover .recipe-item {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
 
 .recipe-main-info {
@@ -69,14 +77,13 @@
   gap: 0.5rem;
 }
 
-.recipe-item a {
-  text-decoration: none;
+.recipe-name {
   color: #2c2c2c;
   font-size: 1.25rem;
   font-weight: 500;
 }
 
-.recipe-item a:hover {
+.recipe-item-link:hover .recipe-name {
   color: #d2691e;
 }
 

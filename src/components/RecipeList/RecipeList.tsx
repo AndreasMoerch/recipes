@@ -36,7 +36,7 @@ const RecipeList: React.FC = () => {
   };
 
   // Filter recipes based on selected category
-  const filteredRecipes = selectedCategory 
+  const filteredRecipes = selectedCategory
     ? recipes.filter(recipe => recipe.category === selectedCategory)
     : recipes;
 
@@ -59,20 +59,25 @@ const RecipeList: React.FC = () => {
 
       <div className="recipe-list">
         {filteredRecipes.map((recipe) => (
-          <div key={recipe.id} className="recipe-item">
-            <div className="recipe-main-info">
-              <Link to={`/category/${recipe.category}/recipe/${recipe.id}`} className="recipe-link">
-                {recipe.name}
-              </Link>
-              {recipe.prepTime && (
+          <Link
+            key={recipe.id}
+            to={`/category/${recipe.category}/recipe/${recipe.id}`}
+            className="recipe-item-link"
+          >
+            <div className="recipe-item">
+              <div className="recipe-main-info">
+                <div className="recipe-name">
+                  {recipe.name}
+                </div>
                 <div className="recipe-prep-time">
                   <span className="prep-time-icon">⏱️</span>
                   <span className="prep-time-text">{recipe.prepTime.amount} {recipe.prepTime.unit}</span>
                 </div>
-              )}
+
+              </div>
+              <Category name={recipe.category} />
             </div>
-            <Category name={recipe.category} />
-          </div>
+          </Link>
         ))}
       </div>
     </div>
