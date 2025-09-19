@@ -22,3 +22,35 @@
   margin: 0 0.75rem;
   opacity: 0.6;
 }
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+  .breadcrumb {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .breadcrumb::-webkit-scrollbar {
+    display: none;
+  }
+
+  .breadcrumb-separator {
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumb {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+  }
+
+  .breadcrumb-separator {
+    margin: 0 0.4rem;
+  }
+}

@@ -18,3 +18,16 @@
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+  .App-content {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-content {
+    padding: 1rem 0.75rem;
+  }
+}
