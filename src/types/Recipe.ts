@@ -35,5 +35,5 @@ export interface Recipe {
   /** Step-by-step cooking instructions */
   steps: string[];
   /** Preparation time with amount and unit (optional) */
-  prepTime?: PrepTime;
+  prepTime: PrepTime;
 }
