@@ -36,4 +36,6 @@ export interface Recipe {
   steps: string[];
   /** Preparation time with amount and unit (optional) */
   prepTime: PrepTime;
+  /** Recipe image URL (optional) */
+  imageUrl?: string;
 }
