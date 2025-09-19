@@ -12,6 +12,7 @@ import './RecipeDetail.css';
 const RecipeDetail: React.FC = () => {
   // Fetch id from uri query params.
   const { id } = useParams<{ id: string }>();
+   // Navigates to root if no recipe
   const recipe = useRecipeData(id);
 
   return (
