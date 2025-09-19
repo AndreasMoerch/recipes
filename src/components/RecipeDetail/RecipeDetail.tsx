@@ -1,6 +1,6 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { allRecipes } from '../../data/allRecipes';
+import { useParams } from 'react-router-dom';
+import { useRecipeData } from '../../hooks/useRecipeData';
 import Breadcrumb from '../Breadcrumb';
 import PrepTime from '../PrepTime/PrepTime';
 import './RecipeDetail.css';
@@ -12,17 +12,7 @@ import './RecipeDetail.css';
 const RecipeDetail: React.FC = () => {
   // Fetch id from uri query params.
   const { id } = useParams<{ id: string }>();
-
-  const recipe = allRecipes.find(recipe => recipe.id === id);
-
-  if (!recipe) {
-    return (
-      <div>
-        <h1>Recipe not found</h1>
-        <Link to="/">Back to recipes</Link>
-      </div>
-    );
-  }
+  const recipe = useRecipeData(id);
 
   return (
     <div className="recipe-detail">

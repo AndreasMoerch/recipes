@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useParams, useNavigate } from 'react-router-dom';
-import { Recipe } from '../../types/Recipe';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { allRecipes } from '../../data/allRecipes';
+import { useRecipeFiltering } from '../../hooks/useRecipeFiltering';
 import Category from '../Category/Category';
 import PrepTime from '../PrepTime/PrepTime';
 import './RecipeList.css';
@@ -12,34 +12,7 @@ import './RecipeList.css';
  * and synchronizes the selected category with the URL for direct navigation and bookmarking.
  */
 const RecipeList: React.FC = () => {
-  const recipes: Recipe[] = allRecipes;
-  const { category: urlCategory } = useParams<{ category: string }>();
-  const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-
-  // Get unique categories from all recipes
-  const categories = Array.from(new Set(recipes.map(recipe => recipe.category)));
-
-  // Sync URL category with state
-  useEffect(() => {
-    setSelectedCategory(urlCategory || null);
-  }, [urlCategory]);
-
-  // Toggle category selection and update URL
-  const toggleCategory = (category: string) => {
-    if (selectedCategory === category) {
-      // Deselect - go back to home
-      navigate('/');
-    } else {
-      // Select - navigate to category URL
-      navigate(`/category/${category}`);
-    }
-  };
-
-  // Filter recipes based on selected category
-  const filteredRecipes = selectedCategory
-    ? recipes.filter(recipe => recipe.category === selectedCategory)
-    : recipes;
+  const { selectedCategory, categories, filteredRecipes, toggleCategory } = useRecipeFiltering(allRecipes);
 
   return (
     <div className="recipe-list-container">
