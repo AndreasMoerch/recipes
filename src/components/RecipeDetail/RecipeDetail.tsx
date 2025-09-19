@@ -1,6 +1,6 @@
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { allRecipes } from '../../data/allRecipes';
+import React, { useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useRecipeData } from '../../hooks/useRecipeData';
 import Breadcrumb from '../Breadcrumb';
 import PrepTime from '../PrepTime/PrepTime';
 import './RecipeDetail.css';
@@ -12,17 +12,17 @@ import './RecipeDetail.css';
 const RecipeDetail: React.FC = () => {
   // Fetch id from uri query params.
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
+  const recipe = useRecipeData(id);
 
-  const recipe = allRecipes.find(recipe => recipe.id === id);
+  // Redirect to home if recipe not found
+  useEffect(() => {
+    if (!recipe) {
+      navigate('/');
+    }
+  }, [recipe, navigate]);
 
-  if (!recipe) {
-    return (
-      <div>
-        <h1>Recipe not found</h1>
-        <Link to="/">Back to recipes</Link>
-      </div>
-    );
-  }
+  if (!recipe) return null;
 
   return (
     <div className="recipe-detail">
