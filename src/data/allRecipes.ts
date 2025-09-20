@@ -13,3 +13,8 @@ export const allRecipes: Recipe[] = [
   chickenTikkaMasala,
   liquoriceCheesecake
 ];
+
+/**
+ * Complete list of unique categories.
+ */
+export const allCategories: string[] = Array.from(new Set(allRecipes.map(recipe => recipe.category)));

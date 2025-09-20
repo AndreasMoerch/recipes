@@ -1,0 +1,35 @@
+.prep-time-filter-section h2 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6c757d;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.prep-time-filter-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.prep-time-filter-button {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.prep-time-filter-button:hover {
+  border-color: #999;
+  background: #f8f9fa;
+}
+
+.prep-time-filter-button.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}

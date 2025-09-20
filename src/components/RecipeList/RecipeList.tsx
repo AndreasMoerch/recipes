@@ -1,40 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { allRecipes } from '../../data/allRecipes';
-import { useCategoryFilterSelection } from '../../hooks/useFilterSelection';
-import { useRecipeFilter } from '../../hooks/useRecipeFilter';
+import { Recipe } from '../../types/Recipe';
+import FilterBar from '../FilterBar/FilterBar';
 import Category from '../Category/Category';
 import PrepTime from '../PrepTime/PrepTime';
 import './RecipeList.css';
 
 /**
- * Displays a list of all available recipes with category filtering capabilities.
- * Allows users to filter recipes by category, updates the URL to reflect the selected category,
- * and synchronizes the selected category with the URL for direct navigation and bookmarking.
+ * Displays a list of all available recipes with filtering capabilities.
+ * The FilterBar handles all filtering logic internally.
  */
 const RecipeList: React.FC = () => {
-  const { selectedCategory, toggleCategory } = useCategoryFilterSelection();
-  const { categories, filteredRecipes } = useRecipeFilter({
-    recipes: allRecipes,
-    selectedCategory
-  });
+  const [filteredRecipes, setFilteredRecipes] = useState<Recipe[]>(allRecipes);
 
   return (
     <div className="recipe-list-container">
-      <div className="categories-section">
-        <h2>Categories</h2>
-        <div className="categories-list">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={`category-filter ${selectedCategory === category ? 'active' : ''}`}
-              onClick={() => toggleCategory(category)}
-            >
-              <Category name={category} />
-            </button>
-          ))}
-        </div>
-      </div>
+      <FilterBar
+        recipes={allRecipes}
+        onFilteredRecipesChange={setFilteredRecipes}
+      />
 
       <div className="recipe-list">
         {filteredRecipes.map((recipe) => (
