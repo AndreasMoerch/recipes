@@ -9,6 +9,11 @@ import { tomatoSoup } from './recipes/tomatoSoup';
 import { beefStew } from './recipes/beefStew';
 import { roastPotatoes } from './recipes/roastPotatoes';
 import { vegetableStirFry } from './recipes/vegetableStirFry';
+import { greekSalad } from './recipes/greekSalad';
+import { chiliConCarne } from './recipes/chiliConCarne';
+import { bananaBread } from './recipes/bananaBread';
+import { garlicShrimp } from './recipes/garlicShrimp';
+import { avocadoToast } from './recipes/avocadoToast';
 
 /**
  * Complete list of all recipes.
@@ -25,6 +30,11 @@ export const allRecipes: Recipe[] = [
   beefStew,
   roastPotatoes,
   vegetableStirFry,
+  greekSalad,
+  chiliConCarne,
+  bananaBread,
+  garlicShrimp,
+  avocadoToast,
   liquoriceCheesecake,
 ];
 
