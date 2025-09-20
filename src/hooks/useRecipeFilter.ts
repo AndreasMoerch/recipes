@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import { Recipe } from '../types/Recipe';
 
 interface UseRecipeFilterProps {
@@ -11,7 +10,7 @@ interface UseRecipeFilterProps {
  * Pure filtering logic without any state management
  */
 export const useRecipeFilter = ({ 
-  recipes, 
+recipes, 
   selectedCategory
 }: UseRecipeFilterProps) => {
   
