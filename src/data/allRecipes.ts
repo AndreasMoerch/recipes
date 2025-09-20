@@ -14,6 +14,9 @@ import { chiliConCarne } from './recipes/chiliConCarne';
 import { bananaBread } from './recipes/bananaBread';
 import { garlicShrimp } from './recipes/garlicShrimp';
 import { avocadoToast } from './recipes/avocadoToast';
+import { nachos } from './recipes/nachos';
+import { bruschetta } from './recipes/bruschetta';
+import { cheesePlatter } from './recipes/cheesePlatter';
 
 /**
  * Complete list of all recipes.
@@ -36,6 +39,9 @@ export const allRecipes: Recipe[] = [
   garlicShrimp,
   avocadoToast,
   liquoriceCheesecake,
+  nachos,
+  bruschetta,
+  cheesePlatter,
 ];
 
 /**
