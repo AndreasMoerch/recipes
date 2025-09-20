@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { allRecipes } from '../../data/allRecipes';
-import { useRecipeFiltering } from '../../hooks/useRecipeFiltering';
+import { useCategoryFilterSelection } from '../../hooks/useFilterSelection';
+import { useRecipeFilter } from '../../hooks/useRecipeFilter';
 import Category from '../Category/Category';
 import PrepTime from '../PrepTime/PrepTime';
 import './RecipeList.css';
@@ -12,7 +13,11 @@ import './RecipeList.css';
  * and synchronizes the selected category with the URL for direct navigation and bookmarking.
  */
 const RecipeList: React.FC = () => {
-  const { selectedCategory, categories, filteredRecipes, toggleCategory } = useRecipeFiltering(allRecipes);
+  const { selectedCategory, toggleCategory } = useCategoryFilterSelection();
+  const { categories, filteredRecipes } = useRecipeFilter({
+    recipes: allRecipes,
+    selectedCategory
+  });
 
   return (
     <div className="recipe-list-container">
