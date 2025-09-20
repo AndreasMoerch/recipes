@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import { Recipe } from '../types/Recipe';
 
 interface UseFilteredRecipesProps {
