@@ -18,13 +18,13 @@ export const pastaSalat: Recipe = {
       ]
     },
     {
-        name: "Pasta Salat",
-        ingredients: [
-            { name: "tre-farvet pasta", amount: "500", unit: "g" },
-            { name: "gulerødder", amount: "5-6", unit: "stks" },
-            { name: "hamburgerryg", amount: "150", unit: "g" },
-            { name: "mandelsplitter", amount: "200", unit: "g" },
-        ]
+      name: "Pasta Salat",
+      ingredients: [
+        { name: "tre-farvet pasta", amount: "500", unit: "g" },
+        { name: "gulerødder", amount: "5-6", unit: "stks" },
+        { name: "hamburgerryg", amount: "150", unit: "g" },
+        { name: "mandelsplitter", amount: "200", unit: "g" },
+      ]
     }
   ],
   stepGroups: [
