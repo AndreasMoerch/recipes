@@ -17,6 +17,7 @@ import { avocadoToast } from './recipes/avocadoToast';
 import { nachos } from './recipes/nachos';
 import { bruschetta } from './recipes/bruschetta';
 import { cheesePlatter } from './recipes/cheesePlatter';
+import { pastaSalat } from './recipes/pastaSalat';
 
 /**
  * Complete list of all recipes.
@@ -42,6 +43,7 @@ export const allRecipes: Recipe[] = [
   nachos,
   bruschetta,
   cheesePlatter,
+  pastaSalat
 ];
 
 /**
