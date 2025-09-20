@@ -4,7 +4,7 @@ over large changes. Do it in smaller steps.
 Add documentation (on functions, etc.), but do not be verbose. Be short, and
 concise.
 
-Do not add fluff stuff. Do not add anything I explicitly asked for.
+Do not add fluff stuff. Do not add anything I did not explicitly asked for.
 
 Regarding code style:
 - Do not use abbreviations.
