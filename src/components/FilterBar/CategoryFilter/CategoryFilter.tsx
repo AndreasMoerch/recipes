@@ -14,7 +14,7 @@ const CategoryFilter: React.FC<FilterProps<string>> = ({ options, selected, onTo
           <button
             key={category}
             className={`category-filter-button ${selected === category ? 'active' : ''}`}
-            onClick={() => onToggle(category)}
+            onClick={() => onToggle(selected === category ? null : category )}
           >
             {category}
           </button>

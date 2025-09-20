@@ -9,11 +9,7 @@ export const useFilterSelection = () => {
 
   // Toggle category selection
   const toggleCategory = (category: string | null) => {
-    if (category === null) {
-      setSelectedCategory(null);
-    } else {
-      setSelectedCategory(prev => prev === category ? null : category);
-    }
+    setSelectedCategory(prev => prev === category ? null : category);
   };
 
   // Toggle max prep time selection

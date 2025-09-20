@@ -22,12 +22,12 @@ export const useFilteredRecipes = ({
 
     // Filter on category (if selected)
     if (selectedCategory) {
-        filteredRecipes = filteredRecipes.filter(recipe => recipe.category == selectedCategory);
+        filteredRecipes = filteredRecipes.filter(recipe => recipe.category === selectedCategory);
     }
 
     // Filter on max prep time (if selected)
     if (selectedMaxPrepTime) {
-        filteredRecipes = filteredRecipes.filter(recipe => recipe.prepTime.amount <= selectedMaxPrepTime)
+        filteredRecipes = filteredRecipes.filter(recipe => recipe.prepTime.amount <= selectedMaxPrepTime);
     }
 
     return {
