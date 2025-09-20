@@ -4,6 +4,9 @@ import './Category.css';
 const CATEGORY_EMOJIS: Record<string, string> = {
   dinner: '🍽️',
   dessert: '🍰',
+  breakfast: '🥞',
+  lunch: '🥣',
+  side: '🥔',
 };
 
 interface CategoryProps {
