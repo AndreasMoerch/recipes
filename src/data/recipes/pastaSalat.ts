@@ -46,7 +46,7 @@ export const pastaSalat: Recipe = {
       ]
     },
     {
-      name: "Færddiggør",
+      name: "Færdiggør",
       steps: [
         "Bland kold pasta, gulerødder, hamburgerryg og mandelsplitter i en skål.",
         "Tilføj dressing til skålen og rør rundt.",
