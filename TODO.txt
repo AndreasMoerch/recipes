@@ -1,3 +1,0 @@
-Recipe:
-- Metadata field, e.g. how long to cook, difficulty
-
