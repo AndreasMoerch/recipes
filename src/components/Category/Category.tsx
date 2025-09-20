@@ -7,6 +7,7 @@ const CATEGORY_EMOJIS: Record<string, string> = {
   breakfast: '🥞',
   lunch: '🥣',
   side: '🥔',
+  snack: '🍪',
 };
 
 interface CategoryProps {
