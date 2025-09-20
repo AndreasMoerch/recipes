@@ -11,6 +11,26 @@ export interface Ingredient {
 }
 
 /**
+ * Represents a group of ingredients for a specific part of the recipe
+ */
+export interface IngredientGroup {
+  /** The name of the group (e.g., "sauce", "marinade", "garnish") */
+  name: string;
+  /** List of ingredients in this group */
+  ingredients: Ingredient[];
+}
+
+/**
+ * Represents a group of steps for a specific part of the recipe
+ */
+export interface StepGroup {
+  /** The name of the group (e.g., "sauce", "potatoes", "assembly") */
+  name: string;
+  /** Step-by-step instructions for this group */
+  steps: string[];
+}
+
+/**
  * Represents preparation time with flexible amount and unit
  */
 export interface PrepTime {
@@ -30,10 +50,10 @@ export interface Recipe {
   name: string;
   /** Recipe category (e.g., "dinner", "dessert", "breakfast") */
   category: string;
-  /** List of ingredients needed for the recipe */
-  ingredients: Ingredient[];
-  /** Step-by-step cooking instructions */
-  steps: string[];
+  /** Grouped ingredients for different parts of the recipe */
+  ingredientGroups: IngredientGroup[];
+  /** Grouped step-by-step cooking instructions */
+  stepGroups: StepGroup[];
   /** Preparation time with amount and unit */
   prepTime: PrepTime;
   /** Recipe image URL (optional) */

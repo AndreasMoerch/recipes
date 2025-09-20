@@ -32,26 +32,36 @@ const RecipeDetail: React.FC = () => {
       
       <section className="ingredients-section">
         <h2>Ingredients</h2>
-        <ul className="ingredients-list">
-          {recipe.ingredients.map((ingredient) => (
-            <li key={ingredient.name} className="ingredient-item">
-              <span className="ingredient-amount">{ingredient.amount}</span>
-              <span className="ingredient-unit">{ingredient.unit}</span>
-              <span className="ingredient-name">{ingredient.name}</span>
-            </li>
-          ))}
-        </ul>
+        {recipe.ingredientGroups.map((group) => (
+          <div key={group.name} className="ingredient-group">
+            <h3 className="ingredient-group-title">{group.name}</h3>
+            <ul className="ingredients-list">
+              {group.ingredients.map((ingredient) => (
+                <li key={ingredient.name} className="ingredient-item">
+                  <span className="ingredient-amount">{ingredient.amount}</span>
+                  <span className="ingredient-unit">{ingredient.unit}</span>
+                  <span className="ingredient-name">{ingredient.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </section>
 
       <section className="steps-section">
-        <h2>Instructions</h2>
-        <ol className="steps-list">
-          {recipe.steps.map((step, index) => (
-            <li key={index} className="step-item">
-              {step}
-            </li>
-          ))}
-        </ol>
+        <h2>Steps</h2>
+        {recipe.stepGroups.map((group) => (
+          <div key={group.name} className="step-group">
+            <h3 className="step-group-title">{group.name}</h3>
+            <ol className="steps-list">
+              {group.steps.map((step, index) => (
+                <li key={index} className="step-item">
+                  {step}
+                </li>
+              ))}
+            </ol>
+          </div>
+        ))}
       </section>
     </div>
   );
