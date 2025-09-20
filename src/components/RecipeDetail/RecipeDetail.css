@@ -151,6 +151,33 @@
   font-size: 0.9rem;
 }
 
+/* Ingredient and step groups */
+.ingredient-group, .step-group {
+  margin-bottom: 2rem;
+}
+
+.ingredient-group:last-child, .step-group:last-child {
+  margin-bottom: 0;
+}
+
+.ingredient-group-title, .step-group-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #d2691e;
+  margin-bottom: 0.75rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid #d2691e;
+}
+
+.ingredient-group .ingredients-list, .step-group .steps-list {
+  margin-left: 0.5rem;
+}
+
+/* Reset counter for each step group */
+.step-group .steps-list {
+  counter-reset: step-counter;
+}
+
 /* Mobile responsive design */
 @media (max-width: 768px) {
   .recipe-detail {
