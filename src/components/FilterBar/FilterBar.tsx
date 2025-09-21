@@ -6,6 +6,7 @@ import PrepTimeFilter from './MaxPrepTimeFilter/MaxPrepTimeFilter';
 import { Recipe } from '../../types/Recipe';
 import './FilterBar.css';
 import { allCategories } from '../../data/allRecipes';
+import SourceFilter from './SourceFilter/SourceFilter';
 
 interface FilterBarProps {
   recipes: Recipe[];
@@ -16,11 +17,12 @@ interface FilterBarProps {
  * Self-contained filter bar that manages all filtering state and logic
  */
 const FilterBar: React.FC<FilterBarProps> = ({ recipes, onFilteredRecipesChange }) => {
-  const { selectedCategory, selectedMaxPrepTime, toggleCategory, toggleMaxPrepTime } = useFilterSelection();
+  const { selectedCategory, selectedMaxPrepTime, selectedSource, toggleCategory, toggleMaxPrepTime, toggleSource: toggleSourceFilter } = useFilterSelection();
   const { filteredRecipes } = useFilteredRecipes({
     recipes,
     selectedCategory,
-    selectedMaxPrepTime
+    selectedMaxPrepTime,
+    selectedSource,
   });
 
   // Notify parent component when filtered recipes change
@@ -39,6 +41,11 @@ const FilterBar: React.FC<FilterBarProps> = ({ recipes, onFilteredRecipesChange 
         options={[15, 30, 45, 60]}
         selected={selectedMaxPrepTime}
         onToggle={toggleMaxPrepTime}
+      />
+      <SourceFilter
+        options={["AI", "Non-AI"]}
+        selected={selectedSource}
+        onToggle={toggleSourceFilter}
       />
     </div>
   );

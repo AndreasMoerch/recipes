@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const spaghettiCarbonara: Recipe = {
   id: "spaghetti-carbonara",
   name: "Spaghetti Carbonara",
+  isAiGenerated: true,
   category: "dinner",
   prepTime: { amount: 15, unit: "minutes" },
   imageUrl: "https://images.unsplash.com/photo-1612874742237-6526221588e3?w=800&h=600&fit=crop&crop=center",

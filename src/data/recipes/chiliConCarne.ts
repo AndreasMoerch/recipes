@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const chiliConCarne: Recipe = {
   id: "chili-con-carne",
   name: "Chili Con Carne",
+  isAiGenerated: true,
   category: "dinner",
   prepTime: { amount: 120, unit: "minutes" },
   imageUrl: "https://images.unsplash.com/photo-1658308766948-01c85ade2737?w=800&h=600&fit=crop&crop=center",

@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const lasagna: Recipe = {
   id: "lasagna",
   name: "Classic Lasagna",
+  isAiGenerated: true,
   category: "dinner",
   prepTime: { amount: 90, unit: "minutes" },
   imageUrl: "https://images.unsplash.com/photo-1640063414338-af9faa0c2485?w=800&h=600&fit=crop&crop=center",

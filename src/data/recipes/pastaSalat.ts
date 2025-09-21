@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const pastaSalat: Recipe = {
   id: "pasta-salat",
   name: "Pasta Salat",
+  isAiGenerated: false,
   category: "dinner",
   prepTime: { amount: 40, unit: "minutes" },
   imageUrl: "https://images.unsplash.com/photo-1639585947469-d7365ce62555?w=800&h=600&fit=crop&crop=center",

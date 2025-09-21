@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const chickenTikkaMasala: Recipe = {
   id: "chicken-tikka-masala",
   name: "Chicken Tikka Masala",
+  isAiGenerated: true,
   category: "dinner",
   prepTime: { amount: 45, unit: "minutes" },
   imageUrl: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&h=600&fit=crop&crop=center",

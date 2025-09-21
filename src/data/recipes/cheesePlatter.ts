@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const cheesePlatter: Recipe = {
   id: "cheese-platter",
   name: "Simple Cheese Platter",
+  isAiGenerated: true,
   category: "snack",
   prepTime: { amount: 10, unit: "minutes" },
   imageUrl: "https://images.unsplash.com/photo-1700760933443-84ef4f5feac4?w=800&h=600&fit=crop&crop=center",

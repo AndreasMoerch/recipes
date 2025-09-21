@@ -4,6 +4,7 @@ interface UseFilteredRecipesProps {
     recipes: Recipe[];
     selectedCategory: string | null;
     selectedMaxPrepTime: number | null;
+    selectedSource: string | null;
 }
 
 /**
@@ -13,11 +14,19 @@ interface UseFilteredRecipesProps {
 export const useFilteredRecipes = ({
     recipes,
     selectedCategory,
-    selectedMaxPrepTime
+    selectedMaxPrepTime,
+    selectedSource,
 }: UseFilteredRecipesProps) => {
 
     // Default is just all recipes
     let filteredRecipes = recipes;
+
+    // Temporary filter to remove AI recipes from the page (selectedSource === null => all recipes)
+    if (selectedSource === "AI") {
+        filteredRecipes = filteredRecipes.filter(recipes => recipes.isAiGenerated)
+    } else if (selectedSource === "Non-AI") (
+        filteredRecipes = filteredRecipes.filter(recipe => !recipe.isAiGenerated)
+    )
 
     // Filter on category (if selected)
     if (selectedCategory) {

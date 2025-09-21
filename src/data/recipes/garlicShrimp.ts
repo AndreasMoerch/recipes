@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const garlicShrimp: Recipe = {
   id: "garlic-shrimp",
   name: "Garlic Butter Shrimp",
+  isAiGenerated: true,
   category: "dinner",
   prepTime: { amount: 20, unit: "minutes" },
   imageUrl: "https://images.unsplash.com/photo-1748659118761-44a30b82478c?w=800&h=600&fit=crop&crop=center",

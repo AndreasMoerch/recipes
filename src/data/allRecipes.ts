@@ -21,12 +21,10 @@ import { pastaSalat } from './recipes/pastaSalat';
 import { poelsehorn } from './recipes/poelsehorn';
 
 /**
- * Complete list of all recipes.
- *
- * When adding a new recipe, remember to add it here!
+ * Complete list of AI recipes.
+ * These will eventually be removed. Are here for testing purposes.
  */
-export const allRecipes: Recipe[] = [
-  // AI recipes
+export const allAiRecipe: Recipe[] = [
   spaghettiCarbonara,
   chickenTikkaMasala,
   lasagna,
@@ -45,7 +43,15 @@ export const allRecipes: Recipe[] = [
   nachos,
   bruschetta,
   cheesePlatter,
-  // Non-AI
+]
+
+/**
+ * Complete list of all recipes.
+ *
+ * When adding a new recipe, remember to add it here!
+ */
+export const allRecipes: Recipe[] = [
+  ...allAiRecipe,
   pastaSalat,
   poelsehorn,
 ];

@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const tomatoSoup: Recipe = {
   id: "tomato-soup",
   name: "Creamy Tomato Soup",
+  isAiGenerated: true,
   category: "lunch",
   prepTime: { amount: 35, unit: "minutes" },
   imageUrl: "https://images.unsplash.com/photo-1620418029653-f708dd37096a?w=800&h=600&fit=crop&crop=center",

@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const beefStew: Recipe = {
   id: "beef-stew",
   name: "Hearty Beef Stew",
+  isAiGenerated: true,
   category: "dinner",
   prepTime: { amount: 150, unit: "minutes" },
   imageUrl: "https://images.unsplash.com/photo-1664741662725-bd131742b7b7?w=800&h=600&fit=crop&crop=center",
