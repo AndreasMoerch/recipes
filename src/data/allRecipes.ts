@@ -24,7 +24,7 @@ import { poelsehorn } from './recipes/poelsehorn';
  * Complete list of AI recipes.
  * These will eventually be removed. Are here for testing purposes.
  */
-export const allAiRecipe: Recipe[] = [
+export const allAiRecipes: Recipe[] = [
   spaghettiCarbonara,
   chickenTikkaMasala,
   lasagna,
@@ -51,7 +51,7 @@ export const allAiRecipe: Recipe[] = [
  * When adding a new recipe, remember to add it here!
  */
 export const allRecipes: Recipe[] = [
-  ...allAiRecipe,
+  ...allAiRecipes,
   pastaSalat,
   poelsehorn,
 ];
