@@ -1,7 +1,7 @@
 .source-filter-section h2 {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #6c757d;
+  color: var(--text-secondary);
   margin: 0 0 0.75rem 0;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -14,22 +14,23 @@
 }
 
 .source-filter-button {
-  background: white;
-  border: 1px solid #ddd;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 20px;
   padding: 0.5rem 1rem;
   font-size: 0.85rem;
+  color: var(--text-primary);
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .source-filter-button:hover {
-  border-color: #999;
-  background: #f8f9fa;
+  border-color: var(--border-hover);
+  background: var(--bg-hover);
 }
 
 .source-filter-button.active {
-  background: #007bff;
-  color: white;
-  border-color: #007bff;
+  background: var(--button-primary);
+  color: var(--button-primary-text);
+  border-color: var(--button-primary);
 }

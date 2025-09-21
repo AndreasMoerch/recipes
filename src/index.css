@@ -1,4 +1,44 @@
+/* CSS Custom Properties for theming */
+:root {
+  /* Light theme colors */
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --bg-hover: #f1f3f4;
+  --text-primary: #333333;
+  --text-secondary: #6c757d;
+  --text-accent: #1a1a1a;
+  --text-hover: #d2691e;
+  --border-color: #ddd;
+  --border-hover: #999;
+  --button-primary: #007bff;
+  --button-primary-text: #ffffff;
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+  --shadow-heavy: rgba(0, 0, 0, 0.15);
+}
+
+/* Dark theme colors */
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-hover: #3a3a3a;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --text-accent: #ffffff;
+  --text-hover: #ffa500;
+  --border-color: #444444;
+  --border-hover: #666666;
+  --button-primary: #0d6efd;
+  --button-primary-text: #ffffff;
+  --shadow-light: rgba(0, 0, 0, 0.2);
+  --shadow-medium: rgba(0, 0, 0, 0.3);
+  --shadow-heavy: rgba(0, 0, 0, 0.4);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
