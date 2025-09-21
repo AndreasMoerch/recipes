@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const liquoriceCheesecake: Recipe = {
   id: "liquorice-cheesecake",
   name: "Liquorice Cheesecake",
+  isAiGenerated: true,
   category: "dessert",
   prepTime: { amount: 30, unit: "minutes" },
   imageUrl: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&h=600&fit=crop&crop=center",

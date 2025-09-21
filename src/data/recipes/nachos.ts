@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const nachos: Recipe = {
   id: "loaded-nachos",
   name: "Loaded Nachos",
+  isAiGenerated: true,
   category: "snack",
   prepTime: { amount: 25, unit: "minutes" },
   imageUrl: "https://images.unsplash.com/photo-1570466199120-80bba1eabad7?w=800&h=600&fit=crop&crop=center",

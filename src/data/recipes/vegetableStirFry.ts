@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const vegetableStirFry: Recipe = {
   id: "vegetable-stir-fry",
   name: "Quick Vegetable Stir-Fry",
+  isAiGenerated: true,
   category: "dinner",
   prepTime: { amount: 20, unit: "minutes" },
   imageUrl: "https://images.unsplash.com/photo-1599297915779-0dadbd376d49?w=800&h=600&fit=crop&crop=center",

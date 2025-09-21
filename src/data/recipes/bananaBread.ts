@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const bananaBread: Recipe = {
   id: "banana-bread",
   name: "Banana Bread",
+  isAiGenerated: true,
   category: "dessert",
   prepTime: { amount: 70, unit: "minutes" },
   imageUrl: "https://images.unsplash.com/photo-1569762404472-026308ba6b64?w=800&h=600&fit=crop&crop=center",

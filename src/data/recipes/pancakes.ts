@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const pancakes: Recipe = {
   id: "pancakes",
   name: "Fluffy Pancakes",
+  isAiGenerated: true,
   category: "breakfast",
   prepTime: { amount: 20, unit: "minutes" },
   imageUrl: "https://images.unsplash.com/photo-1597524305544-cd821476715f?w=800&h=600&fit=crop&crop=center",

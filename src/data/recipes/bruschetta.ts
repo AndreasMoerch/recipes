@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const bruschetta: Recipe = {
   id: "bruschetta",
   name: "Tomato Bruschetta",
+  isAiGenerated: true,
   category: "snack",
   prepTime: { amount: 15, unit: "minutes" },
   imageUrl: "https://images.unsplash.com/photo-1506280754576-f6fa8a873550?w=800&h=600&fit=crop&crop=center",

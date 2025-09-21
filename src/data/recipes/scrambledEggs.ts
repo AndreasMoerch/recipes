@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const scrambledEggs: Recipe = {
   id: "scrambled-eggs",
   name: "Scrambled Eggs",
+  isAiGenerated: true,
   category: "breakfast",
   prepTime: { amount: 10, unit: "minutes" },
   imageUrl: "https://images.unsplash.com/photo-1687630433648-294f1c78b070?w=800&h=600&fit=crop&crop=center",

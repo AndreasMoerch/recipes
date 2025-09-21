@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const greekSalad: Recipe = {
   id: "greek-salad",
   name: "Greek Salad",
+  isAiGenerated: true,
   category: "side",
   prepTime: { amount: 15, unit: "minutes" },
   imageUrl: "https://images.unsplash.com/photo-1599021419847-d8a7a6aba5b4?w=800&h=600&fit=crop&crop=center",

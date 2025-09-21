@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const poelsehorn: Recipe = {
   id: "poelsehorn",
   name: "Pølsehorn (32 stks)",
+  isAiGenerated: false,
   category: "snack",
   prepTime: { amount: 30, unit: "minutes" },
   imageUrl: "https://images.pexels.com/photos/31346253/pexels-photo-31346253.jpeg?w=800&h=600&fit=crop&crop=center",

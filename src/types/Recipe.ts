@@ -48,6 +48,8 @@ export interface Recipe {
   id: string;
   /** Display name of the recipe */
   name: string;
+  /** Whether the recipe was AI generated (true) or not (false) */
+  isAiGenerated: boolean;
   /** Recipe category (e.g., "dinner", "dessert", "breakfast") */
   category: string;
   /** Grouped ingredients for different parts of the recipe */

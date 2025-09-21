@@ -3,6 +3,7 @@ import { Recipe } from '../../types/Recipe';
 export const roastPotatoes: Recipe = {
   id: "roast-potatoes",
   name: "Crispy Roast Potatoes",
+  isAiGenerated: true,
   category: "side",
   prepTime: { amount: 60, unit: "minutes" },
   imageUrl: "https://images.unsplash.com/photo-1726455414693-4323bf8cbb75?w=800&h=600&fit=crop&crop=center",
