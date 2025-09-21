@@ -18,6 +18,7 @@ import { nachos } from './recipes/nachos';
 import { bruschetta } from './recipes/bruschetta';
 import { cheesePlatter } from './recipes/cheesePlatter';
 import { pastaSalat } from './recipes/pastaSalat';
+import { poelsehorn } from './recipes/poelsehorn';
 
 /**
  * Complete list of all recipes.
@@ -25,6 +26,7 @@ import { pastaSalat } from './recipes/pastaSalat';
  * When adding a new recipe, remember to add it here!
  */
 export const allRecipes: Recipe[] = [
+  // AI recipes
   spaghettiCarbonara,
   chickenTikkaMasala,
   lasagna,
@@ -43,7 +45,9 @@ export const allRecipes: Recipe[] = [
   nachos,
   bruschetta,
   cheesePlatter,
-  pastaSalat
+  // Non-AI
+  pastaSalat,
+  poelsehorn,
 ];
 
 /**
