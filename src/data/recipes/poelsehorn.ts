@@ -34,7 +34,7 @@ export const poelsehorn: Recipe = {
       steps: [
         "Mælk lunes, og gær røres i.",
         "Hæld mel i en skål, og smør smuldres i.",
-        "Tilsælt mælk-gær blanding, salt, sukker og æg i melet. Der røres/æltes til det er en dej",
+        "Tilsæt mælk-gær blanding, salt, sukker og æg i melet. Der røres/æltes til det er en dej",
         "Lad dejen hvile overdækket i 60 minutter.",
       ]
     },
