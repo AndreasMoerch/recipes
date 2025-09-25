@@ -1,23 +1,25 @@
+import { getOppoesiteTheme, Theme } from '../types/Theme';
 import { useState, useEffect } from 'react';
 
-type Theme = 'light' | 'dark';
+const themeStornageKey: string = 'theme';
 
 export const useTheme = () => {
-  // Get initial theme from localStorage or default to 'light'
+
+  // Get initial theme from localStorage or default to Theme.Light
   const [theme, setTheme] = useState<Theme>(() => {
-    const savedTheme = localStorage.getItem('theme') as Theme;
-    return savedTheme || 'light';
+    const savedTheme = localStorage.getItem(themeStornageKey);
+    return savedTheme === Theme.Light ? Theme.Light : Theme.Dark;
   });
 
   // Update localStorage and CSS custom property when theme changes
   useEffect(() => {
-    localStorage.setItem('theme', theme);
+    localStorage.setItem(themeStornageKey, theme);
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
   // Toggle between light and dark themes
   const toggleTheme = () => {
-    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
+    setTheme((prevTheme: Theme) => getOppoesiteTheme(prevTheme));
   };
 
   return { theme, toggleTheme };
