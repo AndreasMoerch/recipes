@@ -9,7 +9,7 @@
     "ci:web": "npm --prefix web ci",
     
     "install:all": "npm run install:root && npm run install:web",
-    "install:root": "npm run install",
+    "install:root": "npm install",
     "install:web": "npm --prefix web install",
     
     "build:all": "npm run build:web",
