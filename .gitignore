@@ -143,10 +143,10 @@ vite.config.ts.timestamp-*
 web/build
 
 # Expo
-.expo/
-dist/
-web-build/
-expo-env.d.ts
+native/.expo/
+native/dist/
+native/web-build/
+native/expo-env.d.ts
 
 # Native
 .kotlin/
@@ -172,8 +172,8 @@ yarn-error.*
 # local env files
 .env*.local
 
-app-example
+native/app-example
 
 # generated native folders
-/ios
-/android
+native/ios
+native/android
