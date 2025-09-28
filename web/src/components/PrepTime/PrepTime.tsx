@@ -9,6 +9,7 @@ interface PrepTimeProps {
 
 /**
  * Reusable component for displaying recipe preparation time
+ * Shows time with an icon and formatted text
  */
 const PrepTime: React.FC<PrepTimeProps> = ({ prepTime }) => {
   return (

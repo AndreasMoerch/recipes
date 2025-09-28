@@ -6,3 +6,9 @@ A list of recipes we use ourselves. A simple react app deployed to GitHub pages 
 
 ## Commands
 * `npm start` - Start the NodeJS server on port 3000
+
+## Auto-labeling
+Pull requests are automatically labeled based on the files changed:
+- Changes to `web/` files → `web` label
+- Changes to `.github/` files → `github` label  
+- Changes to README or `.md` files → `documentation` label
