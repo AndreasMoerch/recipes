@@ -1,0 +1,16 @@
+# Auto-labeling configuration for pull requests
+# Labels are applied based on file path patterns
+
+web:
+  - changed-files:
+    - any-glob-to-any-file: 'web/**/*'
+
+github:
+  - changed-files:
+    - any-glob-to-any-file: '.github/**/*'
+
+documentation:
+  - changed-files:
+    - any-glob-to-any-file: '**/README*'
+    - any-glob-to-any-file: '**/readme*'
+    - any-glob-to-any-file: '**/*.md'
