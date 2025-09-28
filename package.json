@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "typecheck:all": "npm run typecheck:root && npm run typecheck:web",
+    "typecheck:root": "npx tsc --noEmit",
+    "typecheck:web": "npx tsc --noEmit -p web",
+
+    "ci:all": "npm run ci:root && npm run ci:web",
+    "ci:root": "npm ci",
+    "ci:web": "npm --prefix web ci",
+    
+    "install:all": "npm run install:root && npm run install:web",
+    "install:root": "npm install",
+    "install:web": "npm --prefix web install",
+    
+    "build:all": "npm run build:web",
+    "build:web": "npm --prefix web run build",
+
+    "start:web": "npm --prefix web run start"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.1",
+    "@types/react-dom": "^19.1.1",
+    "typescript": "4.9.5"
+  }
+}

@@ -18,11 +18,7 @@
       "react-app"
     ]
   },
-  "devDependencies": {
-    "@types/react": "^19.1.1",
-    "@types/react-dom": "^19.1.1",
-    "typescript": "4.9.5"
-  },
+  "devDependencies": {},
   "browserslist": {
     "production": [
       "defaults"
