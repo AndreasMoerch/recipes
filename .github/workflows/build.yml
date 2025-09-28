@@ -16,12 +16,16 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
+          cache-dependency-path: web/package-lock.json
           
       - name: Install dependencies
         run: npm ci
+        working-directory: web
         
       - name: TypeScript Check
         run: npx tsc --noEmit
+        working-directory: web
           
       - name: Build
         run: npm run build
+        working-directory: web
